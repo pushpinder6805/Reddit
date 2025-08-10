@@ -1,14 +1,13 @@
 import Component from "@glimmer/component";
 import { inject as service } from "@ember/service";
-import getURL from "discourse-common/lib/get-url";
-import { getDefaultHomepage } from "discourse/lib/utilities";
+import { defaultHomepage } from "discourse/lib/utilities";
 
-export default class CustomHomepageContent extends Component {
+export default class CustomHomepage2Content extends Component {
   @service router;
 
   get isHomepage() {
-    const { currentRouteName } = this.router;
-    return currentRouteName === `discovery.${getDefaultHomepage()}`;
+    const currentRouteName = this.router?.currentRouteName || "";
+    return currentRouteName === `discovery.${defaultHomepage()}`;
   }
 }
 
