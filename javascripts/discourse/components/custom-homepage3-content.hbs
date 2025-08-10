@@ -1,0 +1,591 @@
+{{#if this.isCustomHomepage}}
+<section class="course-overview1">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Investment Opportunities with Filters</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container796 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: left;
+            font-size: 36px;
+            margin-bottom: 40px;
+            font-family: 'Georgia', serif;
+            color: #3b3b3b;
+        }
+        .calc {
+            color: white;
+              background: #b09d5e;
+               border-radius: 10px;
+               padding: 5px;
+              border: 1px solid #b09d5e;
+               font-size: 16px;
+              font-family: 'Georgia', serif;
+              text-align: right;
+              cursor: pointer; /* Ensures the cursor changes to a pointer */
+}
+
+        .filters796 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        select {
+            padding: 12px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            background-color: #f7f7f7;
+            padding-left: 20px;
+            padding-right: 20px;
+            cursor: pointer;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #999;
+        }
+
+        .cards796 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card796 {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card796:hover {
+            transform: translateY(-10px);
+        }
+
+        .card796 img {
+            width: 100%;
+            height: 240px;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        .card796 h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card796 p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .card-footer796 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .card-footer796 i {
+            margin-right: 5px;
+        }
+
+        .likes, .comments {
+            display: flex;
+            align-items: center;
+        }
+
+        .tags796 span {
+            background-color: #e0e0e0;
+            border-radius: 15px;
+            padding: 5px 10px;
+            margin-right: 5px;
+            font-size: 12px;
+            color: #555;
+        }
+        .container797 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container797 h1, .container797 .calc {
+    margin: 0; /* Remove default margins for better alignment */
+}
+/* Modal Overlay Styling */
+
+
+    </style>
+</head>
+<body>
+<div class="container796">
+    <div class="container797">
+    <h1>Investment Opportunities</h1>
+    <h2 class="calc" id="open-calculator">Open Investment Calculator</h2>
+    </div>
+    <!-- Overlay Modal -->
+<div id="calculatorModal" class="modal1">
+    <div class="modal1-content">
+        <span class="close-button" id="close-calculator">&times;</span>
+        <div id="calculatorexpress_com-calculator" style="text-align: center;">Loading...</div>
+        <script src="https://firebasestorage.googleapis.com/v0/b/js-scripts-b71a4.appspot.com/o/scripts%2Fembed.js?alt=media&token=53c14d46-c103-4aa4-80f0-1d043988b399"></script>
+        <script type="text/javascript">
+            var embed = 'PHN0eWxlPmlmcmFtZXt3aWR0aDogMTAwJTttaW4td2lkdGg6IDEyMDBweDtib3JkZXI6bm9uZTt9QG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge2lmcmFtZSB7IGRpc3BsYXk6IGJsb2NrOyB3aWR0aDoxMDAlO21pbi13aWR0aDoyODBweDsgfTwvc3R5bGU+PGNlbnRlcj48aWZyYW1lIGlkPSJteUlmcmFtZSIgc3JjPSJodHRwczovL2NhbGN1bGF0b3JleHByZXNzLmNvbS9BUEk3L3RoYWlyNzc3LyIgc2Nyb2xsaW5nPSJubyIgYm9yZGVyPSJubyIgb25sb2FkPSJpRnJhbWVSZXNpemUoKSI+PC9pZnJhbWU+PC9jZW50ZXI+';
+            document.getElementById('calculatorexpress_com-calculator').innerHTML = atob(embed);
+        </script>
+    </div>
+</div>
+<script>
+    // Get modal elements
+const modal1 = document.getElementById("calculatorModal");
+const openButton = document.getElementById("open-calculator");
+const closeButton = document.getElementById("close-calculator");
+
+// Show modal on button click
+openButton.addEventListener("click", () => {
+    modal1.style.display = "flex";
+});
+
+// Close modal on close button click
+closeButton.addEventListener("click", () => {
+    modal1.style.display = "none";
+});
+
+// Close modal on outside click
+window.addEventListener("click", (e) => {
+    if (e.target == modal1) {
+        modal1.style.display = "none";
+    }
+});
+
+</script>
+
+    <div class="filters796">
+        <select id="categoryFilter">
+            <option value="all">Investment Type</option>
+            <option value="Growth Potential">Growth Potential</option>
+            <option value="Tax Benefits">Tax Benefits</option>
+            <option value="Passive Income">Passive Income</option>
+        </select>
+        <select id="impactAreaFilter">
+            <option value="all">Select Impact Area</option>
+            <option value="Environmental Conservation">Environmental Conservation</option>
+            <option value="Affordable & Clean Energy">Affordable & Clean Energy</option>
+            <option value="Good Health and Well-Being">Good Health and Well-Being</option>
+            <option value="Industry, Innovation, and Infrastructure">Industry, Innovation, and Infrastructure</option>
+            <option value="Sustainable Cities & Communities">Sustainable Cities & Communities</option>
+            <option value="Good Health and Well-Being">Good Health and Well-Being</option>
+            <option value="Gender Equality">Gender Equality</option>
+            <option value="Sustainable agriculture & Organic Food">Sustainable agriculture & Organic Food</option>
+        </select>
+        <select id="investmentSizeFilter">
+            <option value="all">Select Investment Size</option>
+            <option value="5000">Less than $5,000</option>
+            <option value="25000">$5,000 - $25,000</option>
+            <option value="50000">$25,000 - $50,000</option>
+            <option value="100000">More than $50,000</option>
+        </select>
+    </div>
+    <section class="cards796" id="cardsContainer">
+        <!-- Cards will be dynamically rendered here -->
+    </section>
+</div>
+
+<script>
+    const cardData = [
+        {
+            title: 'Epic Cleantec',
+            impactArea: 'Environmental Conservation',
+            investmentTypes: ['Growth Potential', 'Tax Benefits', 'Passive Income'],
+            investmentSize: 30000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/4220f2dd11b9c0a54a1eca836f9bae00c9962129_2_867x750.jpeg',
+            description: 'Impact Investment: Water Reuse Technology / Onsite Water Reuse',
+            views: 16,
+            comments: 0,
+            link: 'https://impactinvestingcommunity.com/t/epic-cleantec/140'
+        },
+        {
+            title: 'Energea - Renewable Energy',
+            impactArea: 'Affordable & Clean Energy',
+            investmentTypes: ['Growth Potential', 'Tax Benefits', 'Passive Income'],
+            investmentSize: 100,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/11112796108db01e791fb6d17caf83623e99ffa9_2_867x750.jpeg',
+            description: 'Promoting sustainability and combating climate change',
+            views: 7,
+            comments: 0,
+            link: 'https://impactinvestingcommunity.com/t/energea-renewable-energy/157'
+        },
+        {
+            title: '7Wire Ventures - Healthcare VC',
+            impactArea: 'Good Health and Well-Being',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 40000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/112ec201589db9fc1e9a723b50de2ac9cd74e937_2_867x750.jpeg',
+            description: 'Investing in businesses that make a difference in health and well-being',
+            views: 5,
+            comments: 0,
+            link: 'https://impactinvestingcommunity.com/t/7wireventures-healthcare-vc/168'
+        },
+        {
+            title: 'BlocPower - Clean Energy',
+            impactArea: ['Affordable & Clean Energy'],
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 15000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/7d3201b6da0969907a20eca69f904583ae2bdf80_2_1035x648.jpeg',
+            description: 'Affordable and clean energy solutions for urban areas',
+            views: 10,
+            comments: 1,
+            link: 'https://impactinvestingcommunity.com/t/blocpower-clean-energy/158'
+        },
+        {
+            title: 'Mishra Capital',
+            impactArea: 'Industry, Innovation, and Infrastructure',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 50000,
+            imageUrl: 'https://i.ibb.co/gZZLyWN/mischra.png',
+            description: 'Focused on sustainable investment and growth strategies',
+            views: 8,
+            comments: 2,
+            link: 'https://impactinvestingcommunity.com/t/blocpower-clean-energy/158'
+        },
+        {
+            title: 'ScopeFour Capital',
+            impactArea: 'Sustainable Cities & Communities',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 75000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/0f8fd399fc39f07d2da871fc9224159e02460820_2_867x750.jpeg',
+            description: 'Growth and VC funding for high-impact ventures',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/misra-capital-investment/150'
+        },
+        {
+            title: 'Sunwealth - Big Path Capital',
+            impactArea: 'Affordable & Clean Energy',
+            investmentTypes: ['Growth Potential', 'Tax Benefits', 'Passive Income'],
+            investmentSize: 10000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/original/1X/b19c1dbe55508bd90f863f4078dc1200527d81c2.jpeg',
+            description: 'Investing in clean energy projects',
+            views: 13,
+            comments: 31,
+            link: 'https://impactinvestingcommunity.com/t/sunwealth-big-path-capital/156'
+        },
+        {
+            title: 'Redwood Materials - Recycling',
+            impactArea: 'Environmental Conservation',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 20000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/original/1X/180ea3f944d23d4e11c0a192692f9d17977c734a.jpeg',
+            description: 'Recycling and processing lithium-ion batteries',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/redwood-materials-recycling/152'
+        },
+        {
+            title: 'TAE Technologies - Clean Water',
+            impactArea: 'CleanTech',
+            investmentTypes: ['Affordable & Clean Energy', 'Good Health and Well-Being'],
+            investmentSize: 25000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/a07115a6633a0a80c4d208769f472d226b30712b_2_867x750.jpeg',
+            description: 'Transformational energy source capable of sustaining the planet',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/tae-technologies-clean-water/151'
+        },
+        {
+            title: 'Oscilla Power - Wave Energy',
+            impactArea: 'Affordable & Clean Energy',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 50000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/0587f80aa91d9a4d357168e1a4fab5d6b24a2568_2_867x750.jpeg',
+            description: 'Advanced ocean wave energy converter',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/oscilla-power-wave-energy/155'
+        },
+        {
+            title: 'Greenlight Biosciences',
+            impactArea: 'Good Health and Well-Being',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 10000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/569ed28483cf09bfca23ce00c635a00deec8f55c_2_867x750.jpeg',
+            description: 'Innovative solutions for plant health and crop protection',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/greenlight-biosciences/170'
+        },
+        {
+            title: 'Astia Fund',
+            impactArea: 'Gender Equality',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 12000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/e473cc8f7e25877bb077f40a108199dca30a7942_2_867x750.jpeg',
+            description: 'Invests in high-growth companies with women leaders',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/astia-fund/163'
+        },
+        {
+            title: 'EcoHyde - Startup',
+            impactArea: 'Industry, Innovation, and Infrastructure',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 15000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/3d22252ce667cc53381f2da46e494f890dc4330d_2_867x750.jpeg',
+            description: 'Plant-based leather using upcycled fruit and vegetable waste',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/ecohyde-startup/139'
+        },
+        {
+            title: 'Solubag',
+            impactArea: 'Environmental Conservation',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 18000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/07af63628148b7e199d8405e4e1a3abcddf03f91_2_867x750.jpeg',
+            description: 'Bags that dissolve instantly and are non-toxic',
+            views: 15,
+            comments: 4,
+            link: 'https://impactinvestingcommunity.com/t/solubag/141'
+        },
+        {
+            title: 'West Robins - OYSTER CO',
+            impactArea: 'Environmental Conservation',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 8000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/d44d3e660b511e69a1b77bd63208cd5d7a5da116_2_867x750.jpeg',
+            description: 'Investing in regenerative farming',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/west-robins-oyster-co/143'
+        },
+        {
+            title: 'Iroquois Valley - Organic Farmland',
+            impactArea: 'Environmental Conservation',
+            investmentTypes: ['Growth Potential', 'Tax Benefits', 'Passive Income'],
+            investmentSize: 25000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/3cc332fba56fd97ced80193346adfaa1cc13a613_2_867x750.jpeg',
+            description: 'An organic farmland finance company',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/iroquois-valley-organic-farmland/144'
+        },
+        {
+            title: 'Mighty Buildings',
+            impactArea: 'Sustainable Cities & Communities',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 40000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/e4cf8ddc1bda7127757229b4ffaa8953680107b8_2_867x750.jpeg',
+            description: '3D printing for sustainable building',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/mighty-buildings/145'
+        },
+        {
+            title: 'Bowery - Vertical Farming',
+            impactArea: 'Sustainable agriculture & Organic Food',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 30000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/28c2658cfec4948ad7b8ddadac615879092067a9_2_867x750.jpeg',
+            description: 'Vertical farming for fresh produce',
+            views: 14,
+            comments: 2,
+            link: 'https://impactinvestingcommunity.com/t/bowery-vertical-farming/147'
+        },
+        {
+            title: 'Carbon Robotics AgTech',
+            impactArea: 'Industry, Innovation, and Infrastructure',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 100,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/5b9c9af97ebf529cb9959c6652a126351d031a06_2_867x750.jpeg',
+            description: 'Robotics for sustainable agriculture',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/carbon-robotics-agtech/148'
+        },
+        {
+            title: 'Water Equity - Clean Water',
+            impactArea: 'Good Health and Well-Being',
+            investmentTypes: ['Growth Potential', 'Tax Benefits', 'Passive Income'],
+            investmentSize: 50000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/6ae6b49924d7f62284b4aff0b61dc30a4ab2db0f_2_867x750.jpeg',
+            description: 'Investing in clean water initiatives',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/water-equity-clean-water/167'
+        },
+        {
+            title: 'Dandy',
+            impactArea: 'Good Health and Well-Being',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 10000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/65db96e12643ade0a8bac676696ffd4cf97a253f_2_867x750.jpeg',
+            description: 'Innovative solutions for modern industries',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/dandy/171'
+        },
+        {
+            title: 'Aura Health - Mental Wellness',
+            impactArea: 'Good Health and Well-Being',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 7000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/2c719da7e8b89a17d8e55de7b0221c812eb77767_2_867x750.jpeg',
+            description: 'Mental wellness platform',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/aura-health-mental-wellness/172'
+        },
+        {
+            title: 'ChenMed',
+            impactArea: 'Good Health and Well-Being',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 100,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/394f81390b01946db85256e39ceef6db3df67a7e_2_867x750.jpeg',
+            description: 'Primary care for seniors',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/chenmed/169'
+        },
+        {
+            title: 'Mesentech',
+            impactArea: 'Good Health and Well-Being',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 15000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/05eaf58ba06cff210fa32ce69f0b98c2289adfdb_2_867x750.jpeg',
+            description: 'Bone healing technologies',
+            views: 10,
+            comments: 2,
+            link: 'https://impactinvestingcommunity.com/t/mesentech/166'
+        },
+        {
+            title: 'First Ascent Biomedical',
+            impactArea: 'Good Health and Well-Being',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 35000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/feab962c15f98416a9c00c1e572a6e274ab20406_2_867x750.jpeg',
+            description: 'Individualized cancer treatment plans',
+            views: 8,
+            comments: 1,
+            link: 'https://impactinvestingcommunity.com/t/biotech-first-ascent-biomedical/174'
+        },
+        {
+            title: 'Hypatia Women CEO ETF',
+            impactArea: 'Gender Equality',
+            investmentTypes: ['Growth Potential', 'Tax Benefits', 'Passive Income'],
+            investmentSize: 100,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/8e594662fe7eff025a0a48a1fe6790dbadd8f100_2_867x750.jpeg',
+            description: 'Focused on gender equality in leadership',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/hypatia-women-ceo-etf/159'
+        },
+        {
+            title: 'The Lyme Timber Company',
+            impactArea: 'Environmental Conservation',
+            investmentTypes: ['Growth Potential'],
+            investmentSize: 45000,
+            imageUrl: 'https://impactinvestingcommunity.com/uploads/default/original/1X/e63d43143115be6c67b1942e67735565308512b5.png',
+            description: 'Investing in sustainable timber',
+            views: 12,
+            comments: 3,
+            link: 'https://impactinvestingcommunity.com/t/the-lyme-timber-company/137'
+        }
+    ];
+
+    const cardsContainer = document.getElementById('cardsContainer');
+
+    function renderCards(cards) {
+        cardsContainer.innerHTML = '';
+        cards.forEach(card => {
+            const cardElement = document.createElement('a');
+            cardElement.classList.add('card796');
+            cardElement.href = card.link;
+            cardElement.target = "_blank";
+            cardElement.innerHTML = `
+                <img src="${card.imageUrl}" alt="${card.title} Logo">
+                <div class="tags796">
+                    ${Array.isArray(card.impactArea) ? card.impactArea.map(area => `<span>${area}</span>`).join('') : `<span>${card.impactArea}</span>`}
+                </div>
+                <h2>${card.title}</h2>
+                <p>${card.description}</p>
+                <div class="card-footer796">
+                    <div class="likes">
+                        <i>👁️</i>${card.views}
+                    </div>
+                    <div class="comments">
+                        <i>💬</i>${card.comments}
+                    </div>
+                </div>
+            `;
+            cardsContainer.appendChild(cardElement);
+        });
+    }
+
+    function filterCards() {
+        const categoryValue = document.getElementById('categoryFilter').value;
+        const impactAreaValue = document.getElementById('impactAreaFilter').value;
+        const investmentSizeValue = document.getElementById('investmentSizeFilter').value;
+
+        const filteredCards = cardData.filter(card => {
+            const categoryMatch = categoryValue === 'all' || card.investmentTypes.includes(categoryValue);
+            const impactAreaMatch = impactAreaValue === 'all' || (
+                Array.isArray(card.impactArea)
+                    ? card.impactArea.includes(impactAreaValue)
+                    : card.impactArea === impactAreaValue
+            );
+            let investmentSizeMatch = true;
+            if (investmentSizeValue !== 'all') {
+                const sizeValue = parseInt(investmentSizeValue);
+                investmentSizeMatch = (sizeValue === 5000 && card.investmentSize < 5000) ||
+                                      (sizeValue === 25000 && card.investmentSize >= 5000 && card.investmentSize <= 25000) ||
+                                      (sizeValue === 50000 && card.investmentSize > 25000 && card.investmentSize <= 50000) ||
+                                      (sizeValue === 100000 && card.investmentSize > 50000);
+            }
+            return categoryMatch && impactAreaMatch && investmentSizeMatch;
+        });
+
+        renderCards(filteredCards);
+    }
+
+    document.getElementById('categoryFilter').addEventListener('change', filterCards);
+    document.getElementById('impactAreaFilter').addEventListener('change', filterCards);
+    document.getElementById('investmentSizeFilter').addEventListener('change', filterCards);
+
+    // Initial render
+    renderCards(cardData);
+</script>
+</body>
+</html>
+
+</section>
+{{/if}}
